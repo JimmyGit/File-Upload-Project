@@ -1,0 +1,289 @@
+/****** CSS RESET *******/
+* {
+	list-style-type: none;
+	box-sizing: border-box;
+	text-decoration: none;
+	font-family: 'Open Sans', arial, sans-serif;
+}
+
+html, body, ul, ol, h1, h2, h3 {
+	margin: 0;
+	padding: 0;
+}
+
+a:hover,
+a:focus {
+	text-decoration: none;
+	color: #007ee5;
+}
+
+html, body { height: 100%; }
+/**** CSS RESET END ***/
+
+body { background-color: #F5F5F5; }
+
+.tabs { height: 50px; }
+
+.tabs a {
+	padding: 0 14px 14px;
+}
+
+.active {
+	font-weight: bold;
+	border-bottom: solid 2px #007ee5;
+}
+
+.form {
+	min-height: 200px;
+}
+
+/**** Down Arrow ****/
+.arrowDown {
+	height: 60px;
+	width: 45px;
+	position: relative;
+}
+
+.arrowDown:after {
+	content: "";
+	position: absolute;
+	bottom: -45px;
+	left: -20px;
+ 	width: 0;
+ 	height: 0;
+ 	border-left: 45px solid transparent;
+ 	border-right: 45px solid transparent;
+
+ 	border-top: 45px solid #F2F3F4;
+}
+/**** Down Arrow END ****/
+
+
+.file {
+	width: 0px;
+	height: 0px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+
+/*** Select File Button + Upload Button ***/
+.file + label,
+#upload-button {
+    color: white;
+    font-size: .8em;
+    background-color: #007ee5;
+    width: 80%;
+    max-width: 200px;
+    font-weight: 100;
+    text-transform: uppercase;
+    border-radius: .4em;
+		padding: 10px 15px 15px;
+}
+
+.file:focus + label,
+.file + label:hover,
+#upload-button:hover {
+    background-color: #0064b7;
+    color: #F2F3F4;
+
+}
+/** Select File Button END ***/
+
+.disclaimer {
+	margin: 25px 0 40px;
+}
+
+#file-form {
+	border-bottom: solid 1px #007ee5;
+	max-width: 300px;
+}
+
+.fileCont {
+	width: 100%;
+	position: relative;
+}
+
+.fileCont a {
+	color: #D6DBDF;
+}
+
+.fileName {
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: 85%;
+}
+
+.deleteFile {
+    display: block;
+    width: 22px;
+    height: 22px;
+    border-radius: 100%;
+		padding-right: 1px;
+    position: absolute;
+    right: 12px;
+    top: 13px;
+}
+
+.buttonText {
+	margin-top: -5px;
+}
+
+.glyphicon {
+	font-size: 20px;
+	margin-right: 5px;
+	top: 5px;
+	-ms-transition:all 0.3s ease-in-out;
+	transition:all 0.3s ease-in-out;
+}
+
+.glyphicon:hover {
+	color: #007ee5
+}
+
+#file-form .glyphicon:hover {
+	color: #fff;
+}
+
+/************** Results Page ****************/
+
+.results {
+	border-top: solid 15px #D6DBDF;
+}
+
+
+/************** My Files Tab ****************/
+.myFiles .fileName {
+	width: 75%;
+}
+
+.myFiles .glyphicon {
+	margin-top: -10px;
+}
+.myFiles .glyphicon:after{
+	position: absolute;
+	bottom: -14px;
+	font-size: 12px;
+	font-family: 'Open Sans', arial, sans-serif;
+}
+
+.myFiles .glyphicon-remove:after{
+	content: 'delete';
+	right: -6px;
+}
+.myFiles .glyphicon-cloud-download:after {
+	content: "download";
+	right: -15px;
+}
+
+.myFiles a {
+	margin-top: -5px;
+}
+
+
+/*****************   Utilities  *****************/
+
+.u-clear {
+	clear: both;
+}
+
+.u-block {
+	display: block;
+}
+
+.u-float-right {
+	float:right;
+}
+
+.u-float-left {
+	float: left;
+}
+
+.u-displaynone {
+	display: none;
+}
+
+.u-text-left {
+	text-align: left;
+}
+
+.u-background-white {
+	background-color: #fff;
+}
+
+.u-background-grey {
+	background-color: #D6DBDF;
+}
+
+.u-background-lightGrey {
+	background-color: #F2F3F4;
+}
+
+.u-lightBlue {
+	color: #007ee5;
+}
+
+.u-lightGrey {
+	color: #F2F3F4;
+}
+
+.u-grey {
+	color: #D6DBDF;
+}
+
+.u-margin-auto {
+	margin: 0 auto;
+}
+
+.u-mt-25 {
+	margin-top: 25px;
+}
+
+.u-mr-25 {
+		margin-right: 25px;
+}
+
+.u-mb-15 {
+	margin-bottom: 15px;
+}
+.u-mb-25 {
+	margin-bottom: 25px;
+}
+
+.u-mb-60 {
+	margin-bottom: 60px;
+}
+
+.u-nopadding {
+	padding: 0;
+}
+
+.u-padding-15 {
+	padding: 15px;
+}
+
+.u-pt-15 {
+	padding-top: 15px;
+}
+
+.u-pb-15 {
+	padding-bottom: 15px;
+}
+
+.u-rounded-top {
+	border-top-right-radius: .7em;
+	border-top-left-radius: .7em;
+}
+
+.u-pointer {
+	cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+	.appDiv {
+		min-width: 440px
+	}
+}
