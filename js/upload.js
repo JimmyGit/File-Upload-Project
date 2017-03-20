@@ -1,36 +1,33 @@
 $('document').ready(function(){
 
-
-//Toggling the add file and upload button - incase use selects cancel, button will not change.
-	$('.fileName').bind("DOMSubtreeModified",function(){
-		$('.file + label').hide();
-		$('#upload-button').show();
-	});
-
 //Removing selected file for upload
 	$('.deleteFile').on('click', function(){
 		let input = $('input.file');
 
 		input.val('');
-		$('.fileCont').hide();d
+		$('.fileCont').hide();
 		$('#upload-button').hide();
 		$('.file + label').show();
 	})
 
 
-// Getting filename to display
+// Getting filename to display, toggling the add file and upload button 
 	$('input.file').on('change', function(){
 		let input = $('input.file'),
 			filename;
 		if (input.val().length > 0) {
 			filename = input.val().split('\\').pop();
-			console.log(filename)
-		}
+			console.log(filename);
+			$('.file + label').hide();
+			$('#upload-button').show();
+
+		} 
 
 
 	//Adding filename and showing
 		$('.fileName').text(filename);
 		$('.fileCont').show();
+
 
 	});
 
