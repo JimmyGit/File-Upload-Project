@@ -1,10 +1,10 @@
 $('document').ready(function(){
 
-//Toggling the add file and upload button
-	$('.file + label').on('click', function(){
+
+//Toggling the add file and upload button - incase use selects cancel, button will not change.
+	$('.fileName').bind("DOMSubtreeModified",function(){
 		$('.file + label').hide();
 		$('#upload-button').show();
-
 	});
 
 //Removing selected file for upload
@@ -12,7 +12,7 @@ $('document').ready(function(){
 		let input = $('input.file');
 
 		input.val('');
-		$('.fileCont').hide();
+		$('.fileCont').hide();d
 		$('#upload-button').hide();
 		$('.file + label').show();
 	})
@@ -26,6 +26,7 @@ $('document').ready(function(){
 			filename = input.val().split('\\').pop();
 			console.log(filename)
 		}
+
 
 	//Adding filename and showing
 		$('.fileName').text(filename);
